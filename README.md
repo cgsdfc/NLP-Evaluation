@@ -1,7 +1,7 @@
 Scripts for some NLP evaluation tasks
 
 ## 1.Monolingual Evaluation
-### English Word Similarity Score and Word Similarity with Steigler's p-value 
+### English Word Similarity Score
 Run the following command to evaluate the Word Similarity Score for many Word Simarity datasets:
 ```
 python all_wordsim.py ~/mydir/your_vec data/word-sim/
