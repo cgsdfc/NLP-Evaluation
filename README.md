@@ -7,7 +7,9 @@ Run the following command to evaluate the Word Similarity Score for many Word Si
 ```
 python all_wordsim.py ~/mydir/your_vec data/word-sim/
 ```
+
 This would output something like:
+```
 Vectors read from: ~/mydir/your_vec
 =================================================================================
 Serial              Dataset       Num Pairs       Not found             Rho
@@ -24,6 +26,7 @@ Serial              Dataset       Num Pairs       Not found             Rho
     10    EN-WS-353-SIM.txt             203              0         0.6849
     11    EN-SIMLEX-999.txt             999              1         0.4007
     12    EN-WS-353-REL.txt             252              0         0.5360
+```
 where the third cloumn is the Spearman’s rank correlation coefficient score
 
 ### Running Word Similarity with Steigler's p-value
@@ -31,7 +34,9 @@ Run the following over a pair of models for which you want to compute whether th
 ```
 python stat_signf.py ~/mydir/en1.vectors ~/mydir/vulic_vectors/en2.vectors data/word-sim/EN-SIMLEX-999.txt
 ```
+
 this will output something like,
+```
 Vectors read from: ~/mydir/en1.vectors
 22
 Vectors read from: ~/mydir/en2.vectors
@@ -49,16 +54,17 @@ Vectors read from: ~/mydir/en2.vectors
          999             129          0.8429
 29
 (1.376206182800332, 0.014533569095982752)
-30
 ```
-31
 Where the p-value is 0.014.
 
 ## Running BLDict
 
 The dictionaries used for evaluation are provided in `en.*.dict`.
+
 The format is,
 `en1 en2 <tab> fr1 fr2 fr3`
 Where `en1` and `en2` are entries on the english side which all share `fr1, fr2, fr3` as possible translations. For eg.
+
 ```dangerous hazardous unsafe risky        dangereux dangereuse```
+
 If you compute the english side tokens of the dictionary you should get 1510 (fr), 1425 (de), 1610(zh) and 1024(sv).
