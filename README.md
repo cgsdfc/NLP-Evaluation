@@ -1,8 +1,7 @@
-# NLP-Evaluation
 Scripts for some NLP evaluation tasks
 
-## Monolingual Evaluation
-### English Word Similarity Score and Word Similarity with Steigler's p-value 
+## 1.Monolingual Evaluation
+### English Word Similarity Score
 Run the following command to evaluate the Word Similarity Score for many Word Simarity datasets:
 ```
 python all_wordsim.py ~/mydir/your_vec data/word-sim/
@@ -57,7 +56,7 @@ Vectors read from: ~/mydir/en2.vectors
 ```
 Where the p-value is 0.014.
 
-## Running BLDict
+## 2. Bilingual Lexicon Induction
 
 The dictionaries used for evaluation are provided in `en.*.dict`.
 
